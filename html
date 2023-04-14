@@ -1,0 +1,13 @@
+// Makes an array of the current percent values
+// in the animation
+var keyframeString = [];  
+for(var i = 0; i < length; i ++)
+{
+  keyframeString.push(keyframes[i].keyText); 
+}
+  
+// Removes all the % values from the array so
+// the getClosest function can perform calculations
+var keys = keyframeString.map(function(str) {
+  return str.replace('%', '');
+});
